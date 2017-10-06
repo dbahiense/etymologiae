@@ -1,9 +1,6 @@
 <?php
-
 namespace etymologiæ\Http\Controllers;
-
 use Illuminate\Http\Request;
-
 class WelcomeController extends Controller
 {
     /**
@@ -11,7 +8,6 @@ class WelcomeController extends Controller
      *
      * @return void
      */
-
     /**
      * Show the application dashboard.
      *
@@ -19,14 +15,6 @@ class WelcomeController extends Controller
      */
     public function index()
     {
-        $json = file_get_contents('https://2459814b.ngrok.io/etym/v1/fluid/English/noun');
-        $data = json_decode($json);
-        $result = $data;
-
-        return view('welcome', [
-                'result' => $result,
-                'json' => $json,
-                'data' => $data
-            ]);
+        return view('welcome');
     }
 }

@@ -13,8 +13,20 @@
 					<button type="submit" class="btn btn-primary"> OK </button>
                 </div>
             </form>
-        </div>
-    </div>
+		</div>
+	</div>
 
+    <div class="row">
+        <div class="col-md-12">
+
+			<code>
+{{$word or ''}}
+			</code>
+
+			<pre>
+{{$json or ''}}
+			</pre>
+		</div>
+	</div>
 </div>
 @endsection
